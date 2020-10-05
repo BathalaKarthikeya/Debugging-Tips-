@@ -93,7 +93,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyCode === 32){
+    if(keyCode === 32 && bird.body.speed<1){
         bird.trajectory=[];
         gameState = "onSling";
        Matter.Body.setPosition(bird.body,{x:200,y:50});
